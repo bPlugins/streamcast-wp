@@ -39,7 +39,5 @@ if (!class_exists('STREAMCAST_Block')) {
 		}
 
 	}
-
-	new STREAMCAST_Block();
 }
 

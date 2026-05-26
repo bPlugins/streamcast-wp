@@ -8,30 +8,34 @@ if (!defined('ABSPATH')) {
 class STREAMCAST_Main {
 
 	public function __construct() {
-		self::load_dependencies(); 
-		new \StreamCast\AJAX();
-		do_action('streamcast_csf_init');
-		add_action('admin_enqueue_scripts', [__CLASS__, 'enqueue_admin_assets']);
-		add_action('admin_menu', [__CLASS__, 'add_help_pages']);
-		add_shortcode('stream', [__CLASS__, 'stream_shortcode']); 
-		add_filter('plugin_action_links_' . plugin_basename(STREAMCAST_PLUGIN_FILE), [$this, 'add_action_links']);
-	}
+		// Include the Composer autoloader if it exists
+		if ( file_exists( STREAMCAST_PLUGIN_PATH . 'vendor/autoload.php' ) ) {
+			require_once STREAMCAST_PLUGIN_PATH . 'vendor/autoload.php';
+		}
 
-	private static function load_dependencies() {
+		// Require remaining procedural files (not classes/namespaces)
 		require_once STREAMCAST_PLUGIN_PATH . 'mimes/enable-mime-type.php';
-		require_once STREAMCAST_PLUGIN_PATH . 'inc/class-streamcast-functions.php';
-		require_once STREAMCAST_PLUGIN_PATH . 'inc/class-streamcast-admin.php';
-		require_once STREAMCAST_PLUGIN_PATH . 'class-streamcast-block.php';
-		require_once STREAMCAST_PLUGIN_PATH . 'inc/class-streamcast-shortcode.php';
-		require_once STREAMCAST_PLUGIN_PATH . 'inc/class-streamcast-ajax.php';
+		require_once STREAMCAST_PLUGIN_PATH . 'inc/class-streamcast-functions.php'; // Registers global helper streamcast_get_meta()
 
 		if (!class_exists('STREAMCAST_STREAMCAST_CSF')) {
-			require_once STREAMCAST_PLUGIN_PATH . 'frameworks/codestar-framework/codestar-framework.php';
+			require_once STREAMCAST_PLUGIN_PATH . 'vendor/codestar-framework/codestar-framework.php';
 		}
 
 		add_action('streamcast_csf_init', function () {
 			require_once STREAMCAST_PLUGIN_PATH . 'inc/class-streamcast-metabox.php';
 		});
+
+		// Instantiate autoloaded classes
+		new \StreamCast\STREAMCAST_Admin();
+		new \StreamCast\STREAMCAST_Block();
+		new \StreamCast\STREAMCAST_Shortcode();
+		new \StreamCast\AJAX();
+
+		do_action('streamcast_csf_init');
+		add_action('admin_enqueue_scripts', [__CLASS__, 'enqueue_admin_assets']);
+		add_action('admin_menu', [__CLASS__, 'add_help_pages']);
+		add_shortcode('stream', [__CLASS__, 'stream_shortcode']); 
+		add_filter('plugin_action_links_' . plugin_basename(STREAMCAST_PLUGIN_FILE), [$this, 'add_action_links']);
 	}
 	
 	public static function load_metabox() {

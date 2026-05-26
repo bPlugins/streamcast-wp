@@ -8,7 +8,6 @@ function bundle() {
     .src([
       "assets/**/*",
       "build/**/*",
-      "frameworks/**/*",
       "inc/**/*",
       "languages/**/*",
       "mimes/**/*",

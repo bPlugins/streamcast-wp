@@ -3,8 +3,8 @@ Contributors: bplugins, taninrahman, shehabulislam, freemius
 Tags: live stream, icecast, shoutcast, radio player, audio player
 Donate link: https://www.buymeacoffee.com/abuhayat
 Requires at least: 6.2
-Tested up to: 6.9
-Stable tag: 2.4.1
+Tested up to: 7.0
+Stable tag: 2.4.2
 Requires PHP: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -281,12 +281,31 @@ This plugin connects to the following external services to provide enhanced func
    - Loaded on: Admin dashboard and player initialization
    - Terms: https://bplugins.com/terms-of-service/ | Privacy Policy: https://bplugins.com/privacy-policy/
 
-9. **Freemius SDK**
-   - Source: [https://freemius.com/](https://freemius.com/)
-   - GitHub: [https://github.com/Freemius/wordpress-sdk](https://github.com/Freemius/wordpress-sdk)
-   - License: GPLv3 – [https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt](https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt)
-   - Purpose:  Provides opt-in usage tracking and analytics to help improve the plugin.
 ---
+
+== Third-Party Libraries ==
+
+This plugin bundles the following third-party JavaScript/PHP libraries.
+
+= Codestar Framework =
+
+* **Source:** [http://codestarframework.com/](http://codestarframework.com/)
+* **GitHub:** [https://github.com/Codestar/codestar-framework](https://github.com/Codestar/codestar-framework)
+* **License:** GPLv2 or later – [https://github.com/Codestar/codestar-framework/blob/master/LICENSE.md](https://github.com/Codestar/codestar-framework/blob/master/LICENSE.md)
+* **Purpose:** Provides the options framework for the plugin's settings and shortcode generator.
+
+= Freemius SDK =
+
+* **Source:** [https://freemius.com/](https://freemius.com/)
+* **GitHub:** [https://github.com/Freemius/wordpress-sdk](https://github.com/Freemius/wordpress-sdk)
+* **License:** GPLv3 – [https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt](https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt)
+* **Purpose:** Provides opt-in usage tracking and analytics to help improve the plugin.
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
 
 == Screenshots ==
 
@@ -301,6 +320,11 @@ This plugin connects to the following external services to provide enhanced func
 ---
 
 == Changelog ==
+
+= 2.4.2 - 26 May 2026 =
+* Update: Improved internal dependency loading structure using Composer autoloading.
+* Fix: Strengthened validation and access controls in the option settings framework.
+* Internationalization: Corrected translation text domain mapping for all checkbox fields.
 
 = 2.4.1 - 10 May 2026 =
 * Compliance: Renamed all global prefixes and namespaces from `STP` to `StreamCast` and `csf` to `streamcast_csf`.

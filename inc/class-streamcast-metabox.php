@@ -5,21 +5,21 @@ if (!defined('ABSPATH')) {
 }
 
 if (class_exists('STREAMCAST_STREAMCAST_CSF')) {
-	$prefix = 'sc_';
-	$post_type = 'streamcast';
+	$streamcast_prefix = 'sc_';
+	$streamcast_post_type = 'streamcast';
 
 	$streamcast_crown_icon = '<span class="streamcast-crown-icon" style="display: inline-flex; width: 18px; height: 18px; vertical-align: middle; margin-right: 5px; align-items: center; justify-content: center;"><img src="' . STREAMCAST_PLUGIN_DIR . 'assets/crown.png" alt="pro-icon" style="width: 18px; height: 16px; display: block;" /></span>';
 
 	// Create a metabox
-	\STREAMCAST_STREAMCAST_CSF::createMetabox($prefix, array(
+	\STREAMCAST_STREAMCAST_CSF::createMetabox($streamcast_prefix, array(
 		'title' => __('Radio Player Configuration', 'streamcast'),
-		'post_type' => $post_type,
+		'post_type' => $streamcast_post_type,
 		'data_type' => 'unserialize',
 		'context' => 'normal',
 	));
 
 
-	\STREAMCAST_STREAMCAST_CSF::createSection($prefix, array(
+	\STREAMCAST_STREAMCAST_CSF::createSection($streamcast_prefix, array(
 		'title' => __('Required fields are marked with an * (asterisk)', 'streamcast'),
 		'fields' => array(
 			array(

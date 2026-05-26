@@ -1,16 +1,16 @@
 <?php
 
 /*
- * Plugin Name: StreamCast - Free
+ * Plugin Name: StreamCast – Live Radio Streaming Player
  * Plugin URI:  https://wordpress.org/plugins/streamcast
  * Description: Play iceCast, Shoutcast, Radioco, Radionomy Live stream in Wordpress.
- * Version: 2.4.1
+ * Version: 2.4.2
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 6.2
- * Tested up to: 6.9
+ * Tested up to: 7.0
  * Text Domain:  streamcast
  * Domain Path:  /languages
  */
@@ -26,12 +26,13 @@ if (function_exists('str_fs')) {
     // Some Setup
     define('STREAMCAST_PLUGIN_DIR', plugin_dir_url(__FILE__));
     define('STREAMCAST_PLUGIN_PATH', plugin_dir_path(__FILE__));
-    define('STREAMCAST_PLUGIN_VERSION', '2.4.1');
+    define('STREAMCAST_PLUGIN_VERSION', '2.4.2');
     define('STREAMCAST_PLUGIN_FILE', __FILE__);
     define('STREAMCAST_HAS_PRO', 'streamcast-premium/streamcast.php' === plugin_basename(__FILE__));
 
     if (!function_exists('str_fs')) {
-        function str_fs() {
+        function str_fs()
+        {
             global $str_fs;
             if (!isset($str_fs)) {
 

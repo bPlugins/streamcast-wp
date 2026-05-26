@@ -132,6 +132,4 @@ if (!class_exists('STREAMCAST_Admin')) {
 		} 
 
 	}
-
-	new STREAMCAST_Admin();
 }

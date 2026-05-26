@@ -36,6 +36,15 @@ export const dashboardInfo = (info) => {
     licenseActiveNonce,
     changelogs: [
       {
+        version: "2.4.2 - 26 May 2026",
+        type: "update",
+        list: [
+          "Maintenance: Integrated Composer autoloading for cleaner internal class management.",
+          "Fix: Strengthened validation and access controls in the option settings framework.",
+          "Internationalization: Corrected translation text domain mapping for all checkbox fields.",
+        ],
+      },
+      {
         version: "2.4.1 - 10 May 2026",
         type: "update",
         list: [

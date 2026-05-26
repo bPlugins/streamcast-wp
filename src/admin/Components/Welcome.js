@@ -1,6 +1,6 @@
 import Overview from '../../../../bpl-tools/Admin/Overview';
-import Changelog from '../../../../bpl-tools/Admin/Changelog';
-import ProAds from '../../../../bpl-tools/Admin/ProAds';
+import Changelog from '../../../../bpl-tools/Admin/Welcome/Changelog';
+import ProAds from '../../../../bpl-tools/Admin/Welcome/ProAds';
 
 const Welcome = (props) => {
   const { isPremium } = props;
@@ -11,9 +11,9 @@ const Welcome = (props) => {
       gridTemplateColumns: isPremium ? '1fr' : 'repeat(auto-fill, minmax(min(480px, 100%), 1fr))',
       gap: '32px'
     }}>
-      <Changelog {...props} />
-
       {!isPremium && <ProAds {...props} />}
+
+      <Changelog {...props} />
     </div>
   </Overview>
 }

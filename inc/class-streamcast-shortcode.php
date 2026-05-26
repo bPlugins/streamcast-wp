@@ -143,7 +143,5 @@ if (!class_exists('STREAMCAST_Shortcode')) {
 			return render_block($block);
 		}
 	}
-
-	new STREAMCAST_Shortcode();
 }
 

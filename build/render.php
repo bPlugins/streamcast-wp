@@ -3,17 +3,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 $id = wp_unique_id( 'streamcast-' );
 
-$streamUrl      = $attributes['radioPlayer']['streamURL'];
-$streamPort     = $attributes['radioPlayer']['streamPort'];
-$playerType     = $attributes['radioPlayer']['playerType'];
-$welcomeMessage = $attributes['radioPlayer']['welcomeMessage'];
-$skin           = $attributes['radioPlayer']['skin']['name'];
-$width          = $attributes['radioPlayer']['skin']['width'];
-$height         = $attributes['radioPlayer']['skin']['height'];
-$autoPlay       = $attributes['radioPlayer']['autoPlay'];
-$volume         = $attributes['radioPlayer']['initialVolume'];
-$playerPosition = $attributes['radioPlayer']['playerPosition'];
-$nonce          = wp_create_nonce( 'streamcast_fetch_nonce' );
+$streamcast_stream_url            = $attributes['radioPlayer']['streamURL'];
+$streamcast_stream_port           = $attributes['radioPlayer']['streamPort'];
+$streamcast_player_type           = $attributes['radioPlayer']['playerType'];
+$streamcast_welcome_message       = $attributes['radioPlayer']['welcomeMessage'];
+$streamcast_skin                  = $attributes['radioPlayer']['skin']['name'];
+$streamcast_width                 = $attributes['radioPlayer']['skin']['width'];
+$streamcast_height                = $attributes['radioPlayer']['skin']['height'];
+$streamcast_auto_play             = $attributes['radioPlayer']['autoPlay'];
+$streamcast_volume                = $attributes['radioPlayer']['initialVolume'];
+$streamcast_player_position       = $attributes['radioPlayer']['playerPosition'];
+$streamcast_nonce                 = wp_create_nonce( 'streamcast_fetch_nonce' );
 
 if ( ! function_exists( 'streamcast_get_player_position_styles' ) ) {
 	function streamcast_get_player_position_styles( $id, $playerPosition ) {
@@ -30,45 +30,45 @@ if ( ! function_exists( 'streamcast_get_player_position_styles' ) ) {
 	}
 }
 
-$dynamicPlayerStyles = streamcast_get_player_position_styles( $id, $playerPosition );
+$streamcast_dynamic_player_styles = streamcast_get_player_position_styles( $id, $streamcast_player_position );
 
-if ( $skin !== 'b_circle' && $playerType === 'standard' ) {
-	$stationName      = $attributes['radioPlayer']['stationName'];
-	$fetchNameFromUrl = $attributes['radioPlayer']['fetchNameFromUrl'];
+if ( $streamcast_skin !== 'b_circle' && $streamcast_player_type === 'standard' ) {
+	$streamcast_station_name          = $attributes['radioPlayer']['stationName'];
+	$streamcast_fetch_name_from_url   = $attributes['radioPlayer']['fetchNameFromUrl'];
 
 	?>
 	<div id='<?php echo esc_attr( $id ); ?>'>
 		<style>
-			<?php echo esc_html( wp_strip_all_tags( $dynamicPlayerStyles ) ); ?>
+			<?php echo esc_html( wp_strip_all_tags( $streamcast_dynamic_player_styles ) ); ?>
 		</style>
 		<script type="text/javascript">
 			window.MRP?.insert({
-				url: <?php echo wp_json_encode( $streamUrl ); ?>,
+				url: <?php echo wp_json_encode( $streamcast_stream_url ); ?>,
 				lang: "en",
 				codec: "mp3",
-				volume: <?php echo (int) $volume; ?>,
-				autoplay: <?php echo $autoPlay ? 'true' : 'false'; ?>,
+				volume: <?php echo (int) $streamcast_volume; ?>,
+				autoplay: <?php echo $streamcast_auto_play ? 'true' : 'false'; ?>,
 				forceHTML5: true,
-				welcome: <?php echo wp_json_encode( $welcomeMessage ); ?>,
+				welcome: <?php echo wp_json_encode( $streamcast_welcome_message ); ?>,
 				jsevents: true,
 				buffering: 0,
 				wmode: "transparent",
-				skin: <?php echo wp_json_encode( $skin ); ?>,
-				width: <?php echo (int) $width; ?>,
-				height: <?php echo (int) $height; ?>,
+				skin: <?php echo wp_json_encode( $streamcast_skin ); ?>,
+				width: <?php echo (int) $streamcast_width; ?>,
+				height: <?php echo (int) $streamcast_height; ?>,
 				metadataMode: "shoutcast",
 				metadataInterval: 15
 			});
 
-			var title = <?php echo wp_json_encode( $stationName ); ?>;
+			var title = <?php echo wp_json_encode( $streamcast_station_name ); ?>;
 
 			async function fetchData() {
 				try {
-					const fetchUrl = <?php echo wp_json_encode( esc_url( $streamUrl ) . '/currentsong?sid=1' ); ?>;
+					const fetchUrl = <?php echo wp_json_encode( esc_url( $streamcast_stream_url ) . '/currentsong?sid=1' ); ?>;
 					const formData = new FormData();
 					formData.append('action', 'streamcast_fetch_stream');
 					formData.append("url", fetchUrl);
-					formData.append("nonce", <?php echo wp_json_encode( $nonce ); ?>);
+					formData.append("nonce", <?php echo wp_json_encode( $streamcast_nonce ); ?>);
 
 					const response = await fetch(<?php echo wp_json_encode( admin_url( 'admin-ajax.php' ) ); ?>, {
 						method: "POST",
@@ -88,11 +88,11 @@ if ( $skin !== 'b_circle' && $playerType === 'standard' ) {
 
 			async function fetchIceCastData() {
 				try {
-					const fetchUrl = <?php echo wp_json_encode( esc_url( $streamUrl ) . '/status-json.xsl' ); ?>;
+					const fetchUrl = <?php echo wp_json_encode( esc_url( $streamcast_stream_url ) . '/status-json.xsl' ); ?>;
 					const formData = new FormData();
 					formData.append('action', 'streamcast_fetch_stream');
 					formData.append("url", fetchUrl);
-					formData.append("nonce", <?php echo wp_json_encode( $nonce ); ?>);
+					formData.append("nonce", <?php echo wp_json_encode( $streamcast_nonce ); ?>);
 
 					const response = await fetch(<?php echo wp_json_encode( admin_url( 'admin-ajax.php' ) ); ?>, {
 						method: "POST",
@@ -118,9 +118,9 @@ if ( $skin !== 'b_circle' && $playerType === 'standard' ) {
 			}
 
 			async function updateTitle() {
-				let title = <?php echo wp_json_encode( $stationName ); ?>;
+				let title = <?php echo wp_json_encode( $streamcast_station_name ); ?>;
 
-				<?php if ( $fetchNameFromUrl ) { ?>
+				<?php if ( $streamcast_fetch_name_from_url ) { ?>
 					let fetchedTitle = await fetchData();
 					if (!fetchedTitle) {
 						fetchedTitle = await fetchIceCastData();
@@ -142,4 +142,3 @@ if ( $skin !== 'b_circle' && $playerType === 'standard' ) {
 	?>
 	<div <?php echo wp_kses_post( get_block_wrapper_attributes() ); ?> id='<?php echo esc_attr( $id ); ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'></div>
 <?php }
-
