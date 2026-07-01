@@ -12,7 +12,6 @@ function bundle() {
       "languages/**/*",
       "public/**/*",
       "vendor/**/*",
-      "class-streamcast-block.php",
       "iframe.html",
       "readme.txt",
       "streamcast.php",
