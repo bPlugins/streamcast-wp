@@ -10,7 +10,6 @@ function bundle() {
       "build/**/*",
       "inc/**/*",
       "languages/**/*",
-      "mimes/**/*",
       "public/**/*",
       "vendor/**/*",
       "class-streamcast-block.php",

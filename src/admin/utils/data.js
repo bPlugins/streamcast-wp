@@ -36,6 +36,15 @@ export const dashboardInfo = (info) => {
     licenseActiveNonce,
     changelogs: [
       {
+        version: "2.4.3 - 4 July 2026",
+        type: "update",
+        list: [
+          "Refactor: Reorganized plugin architecture by keeping blocks under src/blocks/streamcast/ and admin dashboard under src/admin-dashboard/.",
+          "Refactor: Realigned all backend PHP file and folder structures, namespaces, classes, and constants to match the StreamCast free repository on GitHub while preserving all premium-only features.",
+          "Update: Upgraded admin dashboard welcome layout to use the unified bpl-tools Admin experience.",
+        ],
+      },
+      {
         version: "2.4.2 - 26 May 2026",
         type: "update",
         list: [
