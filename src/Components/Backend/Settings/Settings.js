@@ -11,7 +11,7 @@ import GeneralTab from "./General/GeneralTab";
 import Style from "./Style/Style";
 
 const Settings = ({ attributes, setAttributes }) => { 
-  const { radioPlayer } = attributes;
+  const { radioPlayer = {} } = attributes;
   const { playerType } = radioPlayer; 
 
   return (

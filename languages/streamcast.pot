@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-01T08:56:46+00:00\n"
+"POT-Creation-Date: 2026-07-01T09:26:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: streamcast\n"
@@ -39,123 +39,155 @@ msgstr ""
 msgid "http://bPlugins.com"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:24
+#: bundled/streamcast/inc/class-streamcast-admin.php:25
 #: inc/class-streamcast-admin.php:24
 #: inc/class-streamcast-admin.php:25
 msgid "StreamCast"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:26
+#: bundled/streamcast/inc/class-streamcast-admin.php:27
 #: inc/class-streamcast-admin.php:26
 #: inc/class-streamcast-admin.php:27
 msgid "Add New Radio Player"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:28
 #: inc/class-streamcast-admin.php:28
 msgid "Edit Radio"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:29
 #: inc/class-streamcast-admin.php:29
 msgid "New Radio"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:30
 #: inc/class-streamcast-admin.php:30
 msgid "View Radio"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:31
 #: inc/class-streamcast-admin.php:31
 msgid "All Player"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:32
 #: inc/class-streamcast-admin.php:32
 msgid "Search Radio"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:33
 #: inc/class-streamcast-admin.php:33
 msgid "Sorry, we couldn't find the Radio you are looking for."
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:67
 #: inc/class-streamcast-admin.php:67
 msgid "Updated"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-admin.php:116
 #: inc/class-streamcast-admin.php:116
 msgid "Copy and paste this shortcode into your posts, pages and widget"
 msgstr ""
 
-#: inc/class-streamcast-main.php:132
+#: bundled/streamcast/inc/class-streamcast-main.php:133
+#: inc/class-streamcast-main.php:133
 msgid "Help & Demo's"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:15
 #: inc/class-streamcast-metabox.php:15
 msgid "Radio Player Configuration"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:23
 #: inc/class-streamcast-metabox.php:23
 msgid "Required fields are marked with an * (asterisk)"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:28
 #: inc/class-streamcast-metabox.php:28
 msgid "Radio Player Type*"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:29
 #: inc/class-streamcast-metabox.php:29
 msgid "You must choose radio player type first to get related settings fields."
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:31
 #: inc/class-streamcast-metabox.php:31
 msgid "Minimal"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:32
 #: inc/class-streamcast-metabox.php:32
 msgid "Standard"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:33
 #: inc/class-streamcast-metabox.php:33
 msgid "Advanced"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:34
 #: inc/class-streamcast-metabox.php:34
 msgid "Ultimate"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:35
 #: inc/class-streamcast-metabox.php:35
 msgid "EchoStream"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:36
 #: inc/class-streamcast-metabox.php:36
 msgid "AuroraPlay"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:37
 #: inc/class-streamcast-metabox.php:37
 msgid "Wooden"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:47
 #: inc/class-streamcast-metabox.php:47
 #: src/Components/Backend/Settings/General/General.js:51
 msgid "Stream URL*"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:48
 #: inc/class-streamcast-metabox.php:48
 msgid "Add or Upload File"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:49
 #: inc/class-streamcast-metabox.php:49
 msgid "Remove Mp3"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:57
 #: inc/class-streamcast-metabox.php:57
 #: src/Components/Backend/Settings/General/SettingsXEchoStream.js:25
 #: src/Components/Backend/Settings/General/SettingsXWooden.js:23
 msgid "Stream URL"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:59
 #: inc/class-streamcast-metabox.php:59
 msgid "Select a .pls file"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:60
 #: inc/class-streamcast-metabox.php:60
 msgid "Remove pls"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:69
+#: bundled/streamcast/inc/class-streamcast-metabox.php:76
 #: inc/class-streamcast-metabox.php:69
 #: inc/class-streamcast-metabox.php:76
 #: src/Components/Backend/Settings/General/General.js:56
@@ -167,16 +199,21 @@ msgstr ""
 msgid "Station Name*"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:85
 #: inc/class-streamcast-metabox.php:85
 #: src/Components/Backend/Settings/General/General.js:63
 #: src/Components/Backend/Settings/General/General.js:119
 msgid "Welcome Message*"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:92
 #: inc/class-streamcast-metabox.php:92
 msgid "Artist/Fm Name*"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:100
+#: bundled/streamcast/inc/class-streamcast-metabox.php:108
+#: bundled/streamcast/inc/class-streamcast-metabox.php:257
 #: inc/class-streamcast-metabox.php:100
 #: inc/class-streamcast-metabox.php:108
 #: inc/class-streamcast-metabox.php:257
@@ -187,44 +224,57 @@ msgstr ""
 msgid "Player Width"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:115
 #: inc/class-streamcast-metabox.php:115
 msgid "Skin"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:211
 #: inc/class-streamcast-metabox.php:211
 msgid "Stream Provider*"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:213
 #: inc/class-streamcast-metabox.php:213
 msgid "SHOUT cast"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:214
 #: inc/class-streamcast-metabox.php:214
 msgid "Ice cast"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:215
 #: inc/class-streamcast-metabox.php:215
 msgid "Other"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:224
 #: inc/class-streamcast-metabox.php:224
 msgid "Stream URL *"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:232
 #: inc/class-streamcast-metabox.php:232
 msgid "Stream Port *"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:240
 #: inc/class-streamcast-metabox.php:240
 msgid "Stream Mount Point *"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:248
+#: bundled/streamcast/inc/class-streamcast-shortcode.php:33
+#: bundled/streamcast/inc/class-streamcast-shortcode.php:40
 #: inc/class-streamcast-metabox.php:248
 #: inc/class-streamcast-shortcode.php:33
 #: inc/class-streamcast-shortcode.php:40
 msgid "Station Name"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:265
+#: bundled/streamcast/inc/class-streamcast-metabox.php:301
 #: inc/class-streamcast-metabox.php:265
 #: inc/class-streamcast-metabox.php:301
 #: src/Components/Backend/Settings/Style/StyleXEchoStreamXAurora.js:35
@@ -232,10 +282,13 @@ msgstr ""
 msgid "Content Color"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:274
 #: inc/class-streamcast-metabox.php:274
 msgid "Blur Effect"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-metabox.php:285
+#: bundled/streamcast/inc/class-streamcast-metabox.php:293
 #: inc/class-streamcast-metabox.php:285
 #: inc/class-streamcast-metabox.php:293
 #: src/Components/Backend/Settings/Style/StyleXEchoStreamXAurora.js:27
@@ -243,20 +296,50 @@ msgstr ""
 msgid "Background Color"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-shortcode.php:34
 #: inc/class-streamcast-shortcode.php:34
 msgid "Welcome Message"
 msgstr ""
 
+#: bundled/streamcast/inc/class-streamcast-shortcode.php:44
 #: inc/class-streamcast-shortcode.php:44
 msgid "Hello London"
 msgstr ""
 
-#: src/admin/post.js:10
+#: src/admin-dashboard/post.js:9
 msgid "Copied Successfully!"
 msgstr ""
 
-#: src/admin/post.js:12
+#: src/admin-dashboard/post.js:11
 msgid "Copy To Clipboard"
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:167
+msgid "Customize You Player with some awesome options"
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:168
+msgid "Enhance your player using 85+ radio player skins."
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:169
+msgid "Works great with Shoutcast, Icecast, and other compatible streaming servers."
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:170
+msgid "This plugin creates ShortCode for Each radio. So that you can play radio anywhere without coding."
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:171
+msgid "Collect Stream Name or Title or Artist Name from you streaming name."
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:172
+msgid "Alignment your player like left, center, right."
+msgstr ""
+
+#: src/admin-dashboard/utils/data.js:173
+msgid "Set image for player background, player poster or art image."
 msgstr ""
 
 #: src/Components/Backend/Settings/General/General.js:18

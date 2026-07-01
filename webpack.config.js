@@ -16,8 +16,8 @@ module.exports = {
   ...defaultConfig,
   entry: {
     ...defaultConfig.entry(),
-    "admin-post": "./src/admin/post.js",
-    "admin-dashboard": "./src/admin/admin.js",
+    "admin-post": "./src/admin-dashboard/post.js",
+    "admin-dashboard": "./src/admin-dashboard/admin.js",
   },
   plugins: [...plugins],
   optimization: {},

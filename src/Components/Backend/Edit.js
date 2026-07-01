@@ -162,7 +162,7 @@ const Edit = (props) => {
   return (
     <>
       <Settings attributes={attributes} setAttributes={setAttributes} />
-      <div {...useBlockProps()} id={id} style={{ position: "relative" }}> 
+      <div {...useBlockProps()} id={id} style={{ position: "relative" }}>
         <Style attributes={attributes} id={id} />
 
         {renderPlayer(playerType, attributes, id, fetchedStationName)}

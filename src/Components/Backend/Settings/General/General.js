@@ -9,9 +9,9 @@ import { perUnit, pxUnit } from '../../../../../../bpl-tools/utils/options';
 import { Notice } from '../../../../../../bpl-tools/Components';
 
 const General = ({ attributes, setAttributes }) => {
-    const { radioPlayer, radioStyles } = attributes;
-    const { backgroundColor, playerWidth } = radioStyles;
-    const { playerType, streamURL, playerPosition, stationName, welcomeMessage, autoPlay, initialVolume, artWork, showTime, skin, fetchNameFromUrl } = radioPlayer;
+    const { radioPlayer = {}, radioStyles = {} } = attributes;
+    const { playerWidth } = radioStyles;
+    const { playerType, streamURL, stationName, welcomeMessage, skin = {}, fetchNameFromUrl } = radioPlayer;
 
 
     return <>

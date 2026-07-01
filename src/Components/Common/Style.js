@@ -1,27 +1,27 @@
 import { getTypoCSS, isValidCSS } from "../../../../bpl-tools/utils/getCSS";
 
 const Style = ({ attributes, id }) => {
-  const { radioPlayer, radioStyles } = attributes;
+  const { radioPlayer = {}, radioStyles = {} } = attributes;
   const { playerType, playerPosition } = radioPlayer;
   const {
-    playerWidth,
-    ultimate,
-    backgroundColor,
-    echoStream,
-    stationName,
-    artistFmName,
-    playBtnColor,
-    timeStamp,
+    playerWidth = "100%",
+    ultimate = {},
+    backgroundColor = "#f09f8b",
+    echoStream = {},
+    stationName = {},
+    artistFmName = {},
+    playBtnColor = "red",
+    timeStamp = {},
   } = radioStyles;
   const {
-    playerColors,
-    playerOverlayColor,
-    thumbnailBorderColor,
-    contentColor,
-    progressActiveColor,
-    buttonHoverColor,
-    visualizerColor,
-    playerBackgroundImg,
+    playerColors = "theme",
+    playerOverlayColor = "rgba(15,17,21,0.5)",
+    thumbnailBorderColor = "rgba(255, 255, 255, 0.2)",
+    contentColor = "#fff",
+    progressActiveColor = "orangered",
+    buttonHoverColor = "orangered",
+    visualizerColor = "orangered",
+    playerBackgroundImg = "",
   } = ultimate;
 
   if (
