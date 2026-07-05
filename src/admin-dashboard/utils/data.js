@@ -96,7 +96,7 @@ export const welcomeInfo = (adminUrl) => {
     },
     changelogs: [
       {
-        version: "2.4.3 - 4 July 2026",
+        version: "2.4.3 - 5 July 2026",
         type: "update",
         list: [
           "Refactored plugin directory structure to align admin dashboard and blocks under src/.",

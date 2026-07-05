@@ -102,7 +102,7 @@ const AuroraPlay = ({ attributes, fetchedStationName }) => {
         {/* Artwork */}
         <div className="posterImg">
           <img
-            src={artWork.url}
+            src={artWork?.url ?? artWork}
             alt={`Artwork for ${
               fetchNameFromUrl ? fetchedStationName : stationName
             }`}

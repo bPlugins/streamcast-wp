@@ -116,7 +116,7 @@ const Advanced2 = ({ attributes, fetchedStationName }) => {
     <div className={`advanced-player align-${playerPosition}`}>
       <div className="advanced-details">
         <div>
-          <img src={artWork?.url ? artWork.url : defaultArtWorkImage} alt="" />
+          <img src={(artWork?.url ?? artWork) ? (artWork?.url ?? artWork) : defaultArtWorkImage} alt="" />
         </div>
 
         <div className="details">

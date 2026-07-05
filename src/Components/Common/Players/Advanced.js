@@ -117,7 +117,7 @@ const Advanced = ({ attributes, fetchedStationName }) => {
     }
 
     // Add accessible artwork
-    const artworkUrl = artWork?.url ? artWork.url : defaultArtWorkImage;
+    const artworkUrl = (artWork?.url ?? artWork) ? (artWork?.url ?? artWork) : defaultArtWorkImage;
     const artworkContainer = mainPlayer[0].firstChild.firstChild;
     artworkContainer.style.backgroundImage = `url("${artworkUrl}")`;
     artworkContainer.setAttribute("role", "img");

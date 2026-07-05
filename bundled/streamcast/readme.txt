@@ -321,7 +321,7 @@ This plugin bundles the following third-party JavaScript/PHP libraries.
 
 == Changelog ==
 
-= 2.4.3 - 4 July 2026 =
+= 2.4.3 - 5 July 2026 =
 * **Refactor:** Reorganized plugin architecture by keeping blocks under src/blocks/streamcast/ and admin dashboard under src/admin-dashboard/.
 * **Refactor:** Realigned all backend PHP file and folder structures, namespaces, classes, and constants to match the StreamCast free repository on GitHub while preserving all premium-only features.
 * **Update:** Upgraded admin dashboard welcome layout to use the unified bpl-tools Admin experience.
