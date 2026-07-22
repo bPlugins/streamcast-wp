@@ -25,7 +25,7 @@ exports.zip = () => {
   return (
     gulp
       .src(["bundled/**"])
-      .pipe(zip("streamcast.zip"))
+      .pipe((zip.default || zip)("streamcast.zip"))
       .pipe(gulp.dest("zip"))
   );
 };

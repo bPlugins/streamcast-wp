@@ -96,6 +96,13 @@ export const welcomeInfo = (adminUrl) => {
     },
     changelogs: [
       {
+        version: "2.4.4 - 22 July 2026",
+        type: "update",
+        list: [
+          "Fixed: Resolved early text domain loading notice (_load_textdomain_just_in_time) in WordPress 6.7+."
+        ]
+      },
+      {
         version: "2.4.3 - 5 July 2026",
         type: "update",
         list: [
