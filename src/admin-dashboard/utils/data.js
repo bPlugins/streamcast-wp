@@ -4,7 +4,7 @@ import { gutenbergTabIcon, shortcodeTabIcon } from './icons';
 const slug = 'streamcast';
 
 export const dashboardInfo = (info) => {
-  const { version, isPremium, hasPro, licenseActiveNonce, adminUrl = '' } = info;
+  const { version, isPremium, hasPro, licenseActiveNonce, adminUrl = '', pluginUrl = '' } = info;
 
   const proSuffix = isPremium ? ' Pro' : '';
 
@@ -21,7 +21,9 @@ export const dashboardInfo = (info) => {
     media: {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
       banner: `https://ps.w.org/${slug}/assets/banner-772x250.png`,
-      thumbnail: `https://bplugins.com/wp-content/themes/b-technologies/assets/images/products/${slug}.png`,
+      // 3:2 concept overview, shipped with the plugin — no remote asset, and it
+      // is authored for the .banner purple veil that sits over the bottom 60%.
+      thumbnail: `${pluginUrl}assets/overview.svg`,
     },
     pages: {
       org: `https://wordpress.org/plugins/${slug}/`,
@@ -95,6 +97,15 @@ export const welcomeInfo = (adminUrl) => {
       ],
     },
     changelogs: [
+      {
+        version: "2.4.5 - 25 August 2026",
+        type: "update",
+        list: [
+          'New: Added a "Where It Plays" panel to the classic editor side column, showing the native block and every page builder the shortcode works in, with one-click shortcode copy.',
+          'New: Added a Pro panel to the side column listing the settings the free build keeps locked, so it is clear what an upgrade unlocks without hunting through the form.',
+          'Update: Made the radio player edit screen easier to work with — the shortcode and placement options are now beside Save instead of buried in the configuration form.'
+        ]
+      },
       {
         version: "2.4.4 - 22 July 2026",
         type: "update",
